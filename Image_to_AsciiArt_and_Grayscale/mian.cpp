@@ -6,14 +6,18 @@
 std::string fileName, source;
 int choice = 0;
 void input(void);
+sf::Image resizeImage(const sf::Image&);
 void image_to_Ascii(sf::Image);
 void image_to_gray(sf::Image);
 
 int main()
 {
 	input();
-	sf::Image image;
-	image.loadFromFile(source);
+	sf::Image loded_image, image;
+	loded_image.loadFromFile(source);
+
+	image = resizeImage(loded_image);
+	std::cout << "Resized Image...." << std::endl;
 
 	if (choice == 1)
 		image_to_Ascii(image);
@@ -23,17 +27,27 @@ int main()
 	return 0;
 }
 
-void input()
+sf::Image resizeImage(const sf::Image& originalImage)
 {
-	std::cout << "\n1 -> Convert image to ASCII Art:\n2 -> Convert image to Grayscale image:";
-	std::cout << "\nYour choice: ";
-	std::cin >> choice;
+	float width = 250, height = 0.0;
+	const sf::Vector2u originalImageSize{ originalImage.getSize() };
+	float aspect_ratio = ((float)originalImageSize.x / (float)originalImageSize.y);
+	height = width / aspect_ratio;
 
-	std::cout << "\nThe file must be inside Images folder and low resolution";
-	std::cout << "\nEnter the file name: ";
-	std::cin >> fileName;
-	source = "Images/";
-	source.append(fileName);
+	sf::Image resizedImage;
+	resizedImage.create(width, height);
+	const sf::Vector2u resizedImageSize{ resizedImage.getSize() };
+
+	for (unsigned int y{ 0u }; y < resizedImageSize.y; y++)
+	{
+		for (unsigned int x{ 0u }; x < resizedImageSize.x; x++)
+		{
+			unsigned int origX{ static_cast<unsigned int>(static_cast<double>(x) / resizedImageSize.x * originalImageSize.x) };
+			unsigned int origY{ static_cast<unsigned int>(static_cast<double>(y) / resizedImageSize.y * originalImageSize.y) };
+			resizedImage.setPixel(x, y, originalImage.getPixel(origX, origY));
+		}
+	}
+	return resizedImage;
 }
 
 void image_to_Ascii(sf::Image image)
@@ -92,4 +106,17 @@ void image_to_gray(sf::Image image)
 	image.saveToFile(des);
 	std::cout << "\nSuccessfully Converted..";
 	sf::sleep(sf::Time(sf::seconds(2)));
+}
+
+void input()
+{
+	std::cout << "\n1 -> Convert image to ASCII Art:\n2 -> Convert image to Grayscale image:";
+	std::cout << "\nYour choice: ";
+	std::cin >> choice;
+
+	std::cout << "\nThe file must be inside Images ";
+	std::cout << "\nEnter the file name: ";
+	std::cin >> fileName;
+	source = "Images/";
+	source.append(fileName);
 }

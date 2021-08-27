@@ -1,12 +1,15 @@
 ﻿  mian.cpp
-c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(48): warning C4018: '<': signed/unsigned mismatch
-c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(49): warning C4018: '<': signed/unsigned mismatch
-c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(54): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(73): warning C4018: '<': signed/unsigned mismatch
-c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(74): warning C4018: '<': signed/unsigned mismatch
-c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(79): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(87): warning C4244: 'argument': conversion from 'double' to 'sf::Uint8', possible loss of data
+c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(38): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(62): warning C4018: '<': signed/unsigned mismatch
+c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(63): warning C4018: '<': signed/unsigned mismatch
+c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(68): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(87): warning C4018: '<': signed/unsigned mismatch
+c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(88): warning C4018: '<': signed/unsigned mismatch
+c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(93): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\arkad\documents\deadshot files\c++ programs\sfml\projects\image_to_asciiart_and_grayscale\image_to_asciiart_and_grayscale\mian.cpp(101): warning C4244: 'argument': conversion from 'double' to 'sf::Uint8', possible loss of data
   Generating code
-  All 176 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  4 of 178 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    18 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Image_to_AsciiArt_and_Grayscale.vcxproj -> C:\Users\arkad\Documents\DEADSHOT FILES\C++ Programs\SFML\Projects\Image_to_AsciiArt_and_Grayscale\Release\Image_to_AsciiArt_and_Grayscale.exe
